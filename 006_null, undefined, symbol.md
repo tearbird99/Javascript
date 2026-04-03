@@ -71,3 +71,18 @@ console.log(s1.toString()); // Symbol(hello)
 // 2. .description (ES2019 이후)
 console.log(s1.description); // hello
 ```
+
+#### 🌟 주요 메서드 - Symbol.for()
+```javascript
+// 1. "login" 키로 전역 심볼 생성 및 등록
+const s1 = Symbol.for("login");
+
+// 2. "login" 키로 등록된 심볼이 있으므로 기존 심볼 반환
+const s2 = Symbol.for("login");
+
+console.log(s1 === s2); // true (동일한 심볼)
+
+// 3. 일반 Symbol()과 비교
+const s3 = Symbol("login");
+console.log(s1 === s3); // false (일반 심볼은 레지스트리를 이용하지 않음)
+```
