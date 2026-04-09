@@ -1,5 +1,6 @@
 ### 🔖 개요
-객체(Object)는 자바스크립트에서 **키(key)-값(value)**로 구성된 데이터의 집합이다. 키는 문자열 또는 심볼, 값은 데이터 타입 상관없이 사용 가능하다. 키를 다른 말로 **프로퍼티**라고도 부른다.
+객체(Object)는 자바스크립트에서 **키(key)-값(value)**로 구성된 데이터(**프로퍼티**)의 집합이다. 키는 문자열 또는 심볼, 값은 데이터 타입 상관없이 사용 가능하다.
+또한 자바스크립트에서 문자열, 숫자, 심벌, 불리안, null, undefined가 아닌 값은 전부 객체로 분류된다.
 
 ---
 
@@ -7,6 +8,7 @@
 #### 🌟 객체 리터럴
 가장 일반적인 방식이다.
 ```javascript
+let empty = {};			// 프로퍼티가 없는 객체
 const user = {
   name: 'Edery',         // 프로퍼티
   age: 25,               // 프로퍼티
@@ -16,15 +18,21 @@ const user = {
 };
 ```
 
-#### 🌟 생성자 함수 Object()
+#### 🌟 new 키워드
 ```javascript
-const user = new Object();	// Object 함수로 생성
+const user = new Object();	// new 키워드로 생성
 user.name = 'Edery';		// 프로퍼티 추가
 user.age = 25;				// 프로퍼티 추가
 user.greet = function() {    // 메서드 추가
     console.log('Hello!');
 };
+let obj = new Object();  // 빈 객체 생성 {}
+let arr = new Array();  // 빈 배열 생성 {}
+let date = new Date();  // Date 객체 생성
 ```
+
+#### 🌟 Object.create() 함수
+
 
 #### 🌟 class 키워드 (ES6 이후)
 ```javascript
